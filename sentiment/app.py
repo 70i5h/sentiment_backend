@@ -46,7 +46,7 @@ def analyse_sentiment():
 
 @app.route('/')
 def hello_world():
-    return 'Hello World'
+    return 'JB'
 
 
 # driver function
