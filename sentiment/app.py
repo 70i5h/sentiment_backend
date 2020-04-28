@@ -1,8 +1,7 @@
 from flask import Flask, jsonify, request
-from summarizer import Summarizer
+# from summarizer import Summarizer
 from textblob import TextBlob
 from flask_cors import CORS
-
 
 
 app = Flask(__name__)
@@ -33,17 +32,17 @@ def analyse_sentiment():
     return jsonify({'sentiment': sentiment})
 
 
-@app.route('/analyse/summar', methods=['POST'])
-def analyse_summary():
+# @app.route('/analyse/summar', methods=['POST'])
+# def analyse_summary():
 
-    data = request.get_data()
-    data = data.decode("utf-8").replace("'", '')
+#     data = request.get_data()
+#     data = data.decode("utf-8").replace("'", '')
 
-    model = Summarizer()
-    result = model(data, min_length=60)
-    summary = ''.join(result)
+#     model = Summarizer()
+#     result = model(data, min_length=60)
+#     summary = ''.join(result)
 
-    return jsonify({'summar': summary})
+#     return jsonify({'summar': summary})
 
 
 # driver function
