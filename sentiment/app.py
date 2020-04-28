@@ -44,6 +44,10 @@ def analyse_sentiment():
 
 #     return jsonify({'summar': summary})
 
+@app.route('/')
+def hello_world():
+    return 'Hello World'
+
 
 # driver function
 if __name__ == '__main__':
